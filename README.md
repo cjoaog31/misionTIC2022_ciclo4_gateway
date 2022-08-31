@@ -1,2 +1,2 @@
-# Ciclo4A_Grupo3_ApiGateway
+# Backend ApiGateway
 Repositorio especifico para la parte del ApiGateway
