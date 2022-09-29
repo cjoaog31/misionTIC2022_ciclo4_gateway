@@ -313,7 +313,7 @@ def crearUsuario():
     response = requests.post(url, headers=headers,json=data)
     json = response.json()
     return jsonify(json)
-@app.route("/ususarios/<string:id>",methods=['GET'])
+@app.route("/usuarios/<string:id>",methods=['GET'])
 def getUsuarioID(id):
     headers = {"Content-Type": "application/json; charset=utf-8"}
     url = dataConfig["url-backend-security"] + '/usuarios/'+id
