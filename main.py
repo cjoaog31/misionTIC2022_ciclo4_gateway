@@ -458,11 +458,11 @@ def getPermisoRolID(id):
     response = requests.get(url, headers=headers)
     json = response.json()
     return jsonify(json)
-@app.route("/permisos-roles/rol/<string:id>/permiso/<string:id2>",methods=['PUT'])
-def modificaPermisoRol(id,id2):
+@app.route("/permisos-roles/<string:id3>/rol/<string:id>/permiso/<string:id2>",methods=['PUT'])
+def modificaPermisoRol(id,id2,id3):
     data = request.get_json()
     headers = {"Content-Type": "application/json; charset=utf-8"}
-    url = dataConfig["url-backend-security"] + '/permisos-roles/rol' + id + '/permiso' + id2
+    url = dataConfig["url-backend-security"] + id3 + '/permisos-roles/rol' + id + '/permiso' + id2
     response = requests.put(url, headers=headers, json=data)
     json = response.json()
     return jsonify(json)
