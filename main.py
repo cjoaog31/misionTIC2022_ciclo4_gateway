@@ -154,7 +154,7 @@ def getMesa(id):
     json = response.json()
     return jsonify(json)
 @app.route("/mesas",methods=['PUT'])
-def modificarMesa(id):
+def modificarMesa():
     data = request.get_json()
     headers = {"Content-Type": "application/json; charset=utf-8"}
     url = dataConfig["url-backend-resultados"] + '/mesas'
