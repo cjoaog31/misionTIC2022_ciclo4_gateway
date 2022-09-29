@@ -336,7 +336,14 @@ def eliminarUsuario(id):
     json = response.json()
     return jsonify(json)
 
-
+@app.route("/usuarios/<string:id>/rol/<string:id2>",methods=['PUT'])
+def modificarUsuarioasignarRol(id,id2):
+    data = request.get_json()
+    headers = {"Content-Type": "application/json; charset=utf-8"}
+    url = dataConfig["url-backend-security"] + '/usuarios/'+id+"/rol/"+id2
+    response = requests.put(url, headers=headers, json=data)
+    json = response.json()
+    return jsonify(json)
 
 ###################################################################################
 
