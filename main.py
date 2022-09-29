@@ -305,7 +305,7 @@ def getListarUsuarios():
     response = requests.get(url, headers=headers)
     json = response.json()
     return jsonify(json)
-@app.route("/usuario",methods=['POST'])
+@app.route("/usuarios",methods=['POST'])
 def crearUsuario():
     data = request.get_json()
     headers = {"Content-Type": "application/json; charset=utf-8"}
