@@ -226,15 +226,15 @@ def getDetalleCandidatos():
     json = response.json()
     return jsonify(json)
 
-@app.route("/detalleCandidatos",methods=['GET'])
+@app.route("/participacionMesas",methods=['GET'])
 def participacionMesas():
     headers = {"Content-Type": "application/json; charset=utf-8"}
-    url = dataConfig["url-backend-resultados"] + '/participacionMesas'
+    url = dataConfig["url-backend-resultados"] + '/'
     response = requests.get(url, headers=headers)
     json = response.json()
     return jsonify(json)
 
-@app.route("/detalleCandidatos",methods=['GET'])
+@app.route("/partidosMesas",methods=['GET'])
 def getpartidosMesas():
     headers = {"Content-Type": "application/json; charset=utf-8"}
     url = dataConfig["url-backend-resultados"] + '/partidosMesas'
@@ -242,7 +242,7 @@ def getpartidosMesas():
     json = response.json()
     return jsonify(json)
 
-@app.route("/detalleCandidatos",methods=['GET'])
+@app.route("/partidosParticipacion",methods=['GET'])
 def getpartidosParticipacion():
     headers = {"Content-Type": "application/json; charset=utf-8"}
     url = dataConfig["url-backend-resultados"] + '/partidosParticipacion'
