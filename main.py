@@ -157,7 +157,7 @@ def getMesa(id):
 def modificarMesa(id):
     data = request.get_json()
     headers = {"Content-Type": "application/json; charset=utf-8"}
-    url = dataConfig["url-backend-resultados"] + '/mesas/'+id
+    url = dataConfig["url-backend-resultados"] + '/mesas'
     response = requests.put(url, headers=headers, json=data)
     json = response.json()
     return jsonify(json)
