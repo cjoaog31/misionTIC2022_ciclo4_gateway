@@ -229,7 +229,7 @@ def getDetalleCandidatos():
 @app.route("/participacionMesas",methods=['GET'])
 def participacionMesas():
     headers = {"Content-Type": "application/json; charset=utf-8"}
-    url = dataConfig["url-backend-resultados"] + '/'
+    url = dataConfig["url-backend-resultados"] + '/participacionMesas'
     response = requests.get(url, headers=headers)
     json = response.json()
     return jsonify(json)
