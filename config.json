@@ -1,0 +1,6 @@
+{
+  "url-backend": "127.0.0.1",
+  "port": 7777,
+  "url-backend-security": "https://misionticspringboot.herokuapp.com",
+  "url-backend-resultados": "https://misionticflaskback.herokuapp.com"
+}
