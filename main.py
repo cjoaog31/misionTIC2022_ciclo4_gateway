@@ -33,9 +33,12 @@ jwt = JWTManager(app)
 @app.route("/login", methods=["POST"])
 def create_token():
     data = request.get_json()
+    newData = {}
+    newData["correo"] = data['email']
+    newData["contrasena"] = data['password']
     headers = {"Content-Type": "application/json; charset=utf-8"}
     url=dataConfig["url-backend-security"]+'/usuarios/validar'
-    response = requests.post(url, json=data, headers=headers)
+    response = requests.post(url, json=newData, headers=headers)
     if response.status_code == 200:
         user = response.json()
         expires = datetime.timedelta(seconds=60 * 60*24)
